@@ -1,7 +1,7 @@
 import { type TodosProps } from '../types';
 import { Todo } from './Todo';
 
-export const Todos: React.FC<TodosProps> = ({ todos, onRemoveTodo }) => {
+export const Todos: React.FC<TodosProps> = ({ todos, onRemoveTodo, onCompleteTodo }) => {
   return (
     <ul className='todo-list'>
       {todos.map(todo => (
@@ -15,6 +15,7 @@ export const Todos: React.FC<TodosProps> = ({ todos, onRemoveTodo }) => {
             title={todo.title}
             completed={todo.completed}
             onRemoveTodo={onRemoveTodo}
+            onCompleteTodo={onCompleteTodo}
           />
         </li>
       ))}
